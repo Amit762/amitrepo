@@ -13,7 +13,7 @@ import com.crm.qa.util.TestUtil;
 
 public class TestBase 
 {
-	//local variables
+	//local variables of testbase
 	public static WebDriver driver;
 	public static Properties prop;
 public TestBase() 
@@ -35,7 +35,7 @@ public TestBase()
 	public static void initialization()
 	{
 		String browsername=prop.getProperty("browser");
-		if(browsername.equals("chrome"))
+		if(browsername.equals("chrome "))
 		{
 			System.setProperty("WebDriver.chrome.driver", "C:\\Users\\asah6\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
 			 driver= new ChromeDriver();
@@ -46,6 +46,7 @@ public TestBase()
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_load_timeunt, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait_timeunit, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
