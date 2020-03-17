@@ -13,7 +13,7 @@ import com.crm.qa.util.TestUtil;
 
 public class TestBase 
 {
-	
+	//local variables
 	public static WebDriver driver;
 	public static Properties prop;
 public TestBase() 
