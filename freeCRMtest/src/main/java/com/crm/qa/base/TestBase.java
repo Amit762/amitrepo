@@ -13,7 +13,7 @@ import com.crm.qa.util.TestUtil;
 
 public class TestBase 
 {
-	//local variables
+	//local variables of testbase
 	public static WebDriver driver;
 	public static Properties prop;
 public TestBase() 
@@ -46,6 +46,7 @@ public TestBase()
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_load_timeunt, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait_timeunit, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
